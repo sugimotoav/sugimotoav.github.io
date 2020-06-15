@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>sugimoto</title>
+        <link>https://example.com/</link>
+        <description>时不时发一些看片的边缘技术(特别水)。</description>
+        <generator>Hugo 0.72.0 https://gohugo.io/</generator>
+        
+            <language>zh-CN</language>
+        
+        
+            <managingEditor>sugimoto.av@gmail.com (Sugimoto)</managingEditor>
+        
+        
+            <webMaster>sugimoto.av@gmail.com (Sugimoto)</webMaster>
+        
+        
+            <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+        
+        <lastBuildDate>Tue, 16 Jun 2020 02:23:45 &#43;0800</lastBuildDate>
+        
+            <atom:link rel="self" type="application/rss&#43;xml" href="https://example.com/rss.xml" />
+        
+        
+            <item>
+                <title>本地AV的终极管理方式</title>
+                <link>https://example.com/posts/%E6%9C%AC%E5%9C%B0av%E7%9A%84%E7%BB%88%E6%9E%81%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F/</link>
+                <guid isPermaLink="true">https://example.com/posts/%E6%9C%AC%E5%9C%B0av%E7%9A%84%E7%BB%88%E6%9E%81%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F/</guid>
+                <pubDate>Tue, 16 Jun 2020 01:05:43 &#43;0800</pubDate>
+                
+                    <author>sugimoto.av@gmail.com (Sugimoto)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                <description>&lt;img src=&#34;https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-1602.14.03.jpg&#34; width=600px title=&#34;更新中&#34;&gt;……
+    
+    </description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+            <item>
+                <title>Hello World</title>
+                <link>https://example.com/posts/hello-world/</link>
+                <guid isPermaLink="true">https://example.com/posts/hello-world/</guid>
+                <pubDate>Sat, 13 Jun 2020 23:36:52 &#43;0800</pubDate>
+                
+                    <author>sugimoto.av@gmail.com (Sugimoto)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                <description>&lt;img src=&#34;https://gitee.com/sugimoto/ImageStore/raw/master/Images/img_icon_5%20%281%29.png&#34; width=400px title=&#34;我们无法一起学习&#34;&gt;……
+    
+    </description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
+        
+    </channel>
+</rss>
