@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">sugimoto</title>
     <subtitle type="html">时不时发一些看片的边缘技术(特别水)。</subtitle>
-    <updated>2020-06-16T12:56:08&#43;08:00</updated>
+    <updated>2020-06-16T13:02:25&#43;08:00</updated>
     <id>https://example.com/</id>
     <link rel="alternate" type="text/html" href="https://example.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://example.com/atom.xml" />

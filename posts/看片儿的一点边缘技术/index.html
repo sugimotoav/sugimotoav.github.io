@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.72.0" /><meta name="theme-color" content="#16171d" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title>看片儿的一点边缘技术 | sugimoto</title>
+
+    <link rel="stylesheet" href="/css/meme.min.f83ccc40a91d6f68a27aa01c806c6a78613de51734aad3f0aba42dc21ef5ea0f.css" integrity="sha256-&#43;DzMQKkdb2iieqAcgGxqeGE95Rc0qtPwq6Qtwh716g8=" />
+
+    
+    
+        <script src="/js/meme.min.e431136e7c56f46aac38fef8c23d57d0bff7bb5c62406b0227004051e7095604.js" integrity="sha256-5DETbnxW9GqsOP74wj1X0L/3u1xiQGsCJwBAUecJVgQ="></script>
+
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="Sugimoto" /><meta name="description" content="请注意, 这是一篇特别水的文章.
+…… " />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="sugimoto" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="sugimoto" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://example.com/posts/%E7%9C%8B%E7%89%87%E5%84%BF%E7%9A%84%E4%B8%80%E7%82%B9%E8%BE%B9%E7%BC%98%E6%8A%80%E6%9C%AF/" />
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2020-06-15T20:04:30+08:00",
+        "dateModified": "2020-06-16T12:56:01+08:00",
+        "url": "https://example.com/posts/%E7%9C%8B%E7%89%87%E5%84%BF%E7%9A%84%E4%B8%80%E7%82%B9%E8%BE%B9%E7%BC%98%E6%8A%80%E6%9C%AF/",
+        "headline": "看片儿的一点边缘技术",
+        "description": "请注意, 这是一篇特别水的文章.\n…… ",
+        "inLanguage" : "zh-CN",
+        "articleSection": "posts",
+        "wordCount":  3377 ,
+        "image": ["https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0902.19.18.jpg","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0902.25.05.jpg","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0902.36.37.jpg","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/2020-06-09%2002-32-03.2020-06-09%2002_35_02.gif","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0902.45.35.jpg","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/2020-06-09%2003-00-05.2020-06-09%2003_01_35.gif","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0903.15.44.jpg","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0903.38.09.jpg","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0903.46.05.jpg","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0903.53.04.jpg","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0903.59.25.jpg","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0904.07.19.jpg","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/a5E6F3.png","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0904.15.04.jpg","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/xag0T3.png","https://forum.javcdn.pw/i.imgur.com/QiDRWON.gif","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0920.48.04.jpg","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0920.50.56.jpg","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0920.57.15.jpg","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/2020-06-09%2021-04-51.2020-06-09%2021_09_30.gif","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/QPbYST.png","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/2020-06-09%2023-46-09.2020-06-09%2023_49_43.gif","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/wd3LxE.png","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/2020-06-10%2000-38-14.2020-06-10%2000_39_24.gif","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/VThckN.png","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-1000.45.43.jpg","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/2020-06-10%2001-33-12.2020-06-10%2001_37_12.gif","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/isOK3C.png","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/cxRWmE.png","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/AIG2Lz.png","https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/2020-06-11%2001-50-39.2020-06-11%2001_53_53.gif"],
+        "author": {
+            "@type": "Person",
+            "description": "开车要稳",
+            "email": "sugimoto.av@gmail.com",
+            "image": "https://example.com/icons/apple-touch-icon.png",
+            "url": "https://example.com/",
+            "name": "Sugimoto"
+        },
+        "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)",
+        "publisher": {
+            "@type": "Organization",
+            "name": "sugimoto",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/icons/apple-touch-icon.png"
+            },
+            "url": "https://example.com/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://example.com/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+
+
+
+    
+
+
+
+<meta property="og:title" content="看片儿的一点边缘技术" />
+<meta property="og:description" content="请注意, 这是一篇特别水的文章.
+…… " />
+<meta property="og:url" content="https://example.com/posts/%E7%9C%8B%E7%89%87%E5%84%BF%E7%9A%84%E4%B8%80%E7%82%B9%E8%BE%B9%E7%BC%98%E6%8A%80%E6%9C%AF/" />
+<meta property="og:site_name" content="sugimoto" />
+<meta property="og:locale" content="zh" /><meta property="og:image" content="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0902.19.18.jpg" />
+<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-06-15T20:04:30&#43;08:00" />
+    <meta property="article:modified_time" content="2020-06-16T12:56:01&#43;08:00" />
+    
+    <meta property="article:section" content="posts" />
+
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header" data-scroll-header>
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="/" class="brand">sugimoto</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="/posts/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon archive"><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class="menu-item-name">文章</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/categories/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon th"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"/></svg><span class="menu-item-name">分类</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/tags/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="icon tags"><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg><span class="menu-item-name">标签</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/about/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon user-circle"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        
+            
+                
+                    
+                    
+                        <li class="menu-item">
+                            <a id="theme-switcher" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-light"><path d="M193.2 104.5l48.8-97.5a18 18 0 0128 0l48.8 97.5 103.4 -34.5a18 18 0 0119.8 19.8l-34.5 103.4l97.5 48.8a18 18 0 010 28l-97.5 48.8 34.5 103.4a18 18 0 01-19.8 19.8l-103.4-34.5-48.8 97.5a18 18 0 01-28 0l-48.8-97.5l-103.4 34.5a18 18 0 01-19.8-19.8l34.5-103.4-97.5-48.8a18 18 0 010-28l97.5-48.8-34.5-103.4a18 18 0 0119.8-19.8zM256 128a128 128 0 10.01 0M256 160a96 96 0 10.01 0"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-dark"><path d="M27 412a256 256 0 10154-407a11.5 11.5 0 00-5 20a201.5 201.5 0 01-134 374a11.5 11.5 0 00-15 13"/></svg></a>
+                        </li>
+                    
+                
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post" data-align="justify" data-type="posts" data-toc-num="true">
+
+            <h1 class="post-title">看片儿的一点边缘技术</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2020-06-15T20:04:30&#43;08:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2020.6.15</time>
+    
+    
+        
+        <time datetime="2020-06-16T12:56:01&#43;08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.6.16</time>
+    
+    
+    
+        
+        
+        
+            
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;3377</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;7&nbsp;分钟</span>
+    
+    
+    
+</div>
+
+            
+
+            <nav class="contents">
+  <h2 id="contents" class="contents-title">目录</h2><ol class="toc">
+    <li><a id="contents:视频裁剪" href="#视频裁剪">视频裁剪</a></li>
+    <li><a id="contents:目录封面" href="#目录封面">目录封面</a></li>
+    <li><a id="contents:批量重命名" href="#批量重命名">批量重命名</a></li>
+    <li><a id="contents:使用命令行工具偷懒" href="#使用命令行工具偷懒">使用命令行工具偷懒</a></li>
+  </ol>
+</nav><div class="post-body">
+              <p>请注意, 这是一篇特别水的文章.</p>
+<h2 id="视频裁剪"><a href="#视频裁剪" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:视频裁剪" class="headings">视频裁剪</a></h2>
+<p>裁视频我就用这个Win/macOS双平台都有的 TunesKit Video Cutter, 官网: <a href="https://www.tuneskit.com/video-cutter-for-win.html" target="_blank" rel="noopener">https://www.tuneskit.com/video-cutter-for-win.html</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0902.19.18.jpg" alt="iShot2020-06-0902.19.18"></p>
+<p>我只想截关键帧, 之前macOS平台的同类应用试了几个, 最后试下来, 那几个里面这个可能是最好用的. Windows上不是, 有不少更好的, 它只能算Windows平台上某些应用的替代品.</p>
+<p>使用起来非常简单, 先设置一个裁完以后用来保存文件的文件夹.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0902.25.05.jpg" alt="iShot2020-06-0902.25.05"></p>
+<p>然后直接把视频拖进主窗口, 找到大概想要截取的位置, 然后用 Next Key Frame 和 Previous Key Frame 进行微调, 它们会跳到所在时间线临近的关键帧上, 设置入点和出点, 如果片尾没有广告, 出点可以不设置. 最后直接点击 Start 开始导出.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0902.36.37.jpg" alt="iShot2020-06-0902.36.37"></p>
+<p>从关键帧位置截取视频不用转码, 导出速度受限于存储盘的写入速度和源文件所在盘的读取速度.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/2020-06-09%2002-32-03.2020-06-09%2002_35_02.gif" alt="2020-06-0902-32-03.2020-06-0902_35_02"></p>
+<p>完事了它会自动的把文件重命名, 原始文件名里面多了个&quot;_1&quot;.</p>
+<p>如果一个视频有好几段你想保存的, 也可以手动点多个&quot;+&quot;, 然后一次导出, 导出的文件它不给自动合并, 有点糟心, 这个回头再说.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0902.45.35.jpg" alt="iShot2020-06-0902.45.35"></p>
+<h2 id="目录封面"><a href="#目录封面" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:目录封面" class="headings">目录封面</a></h2>
+<p>找一个女优的头像, 然后复制图片, 在文件夹的简介里点击文件夹的Icon, 然后 Command + V 粘贴图像.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/2020-06-09%2003-00-05.2020-06-09%2003_01_35.gif" alt="2020-06-0903-00-05.2020-06-0903_01_35"></p>
+<h2 id="批量重命名"><a href="#批量重命名" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:批量重命名" class="headings">批量重命名</a></h2>
+<p>A Better Finder Rename, 我主要用它处理一些美剧视频文件名和单独下载的字幕文件名不一致的问题.</p>
+<p>普通人用它给片子改名还可以, 会正则就基本通吃. Windows上这类应用要丰富的多, 找一个带正则的, 使用方法应该没什么区别.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0903.15.44.jpg" alt="iShot2020-06-0903.15.44"></p>
+<p>使用的时候有个尴尬的问题, 我直接把文件夹拖进A Better Finder Rename, 它只会识别当前目录下的文件夹, 它不会自己去深层遍历文件夹内部的文件, 那就没法给里面的视频文件改名.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0903.38.09.jpg" alt="iShot2020-06-0903.38.09"></p>
+<p>按住Command一个个去手动选择那太累了, 把里面的视频文件提出来, 放在一起就行了.</p>
+<p>先建个临时文件夹, 一会存放这些视频文件.</p>
+<p>搜索栏里输入.mp4, 让spotlight去匹配它们, 然后Command + A全选, 再按住 Command + 鼠标左键 剔除那两个名字里有&quot;.mp4&quot;的文件夹, 然后 Command + C 复制.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0903.46.05.jpg" alt="iShot2020-06-0903.46.05"></p>
+<p>打开刚才建的那个临时文件夹, 鼠标右键单击, 然后按住Option键, 点&quot;将XX个项目移动到这里&quot;.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0903.53.04.jpg" alt="iShot2020-06-0903.53.04"></p>
+<p>现在可以开始重命名了, 全选这些视频, 然后拖进 A Better Finder Rename.</p>
+<p>先在Catenory里选择Advanced &amp; Special, Action里选Replace regular expression, 就是正则表达式.</p>
+<p>我想把那个&quot;_1&quot;去掉, 那就Pattern里就输入&quot;_1&quot;, With里留空.</p>
+<p>在下图里最右边的 Change to 里能预览改名后的结果.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0903.59.25.jpg" alt="iShot2020-06-0903.59.25"></p>
+<p>看起来没问题, 有&quot;_1&quot;的就改, 没有&quot;_1&quot;的就保持原样. 不过现在大写的大写, 小写的小写, 应该统一英文为大写.</p>
+<p>那么再从点左下角的&quot;+&quot;, 添加一个Action.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0904.07.19.jpg" alt="iShot2020-06-0904.07.19"></p>
+<p>uppercase大写, lowercase小写. 扩展名我习惯看小写的, 所以选了 without the extension 让它保持原样.</p>
+<p>最后发现还有俩中文字幕的片子, 名字里有&quot;-C&quot;, 跟第一步一样的操作, Pattern里输入&quot;-C&quot;, With留空.</p>
+<p>又发现个问题, PPPD00836这个片子用的DMM的番号样式, 刚才的操作都没被匹配到, 老样子, 把&quot;00&quot;替换成&quot;-&quot;</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/a5E6F3.png" alt="a5E6F3"></p>
+<p>最后点右下角的&quot;Perform Renames&quot;执行改名操作.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0904.15.04.jpg" alt="iShot2020-06-0904.15.04"></p>
+<p>改名后:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/xag0T3.png" alt="xag0T3"></p>
+<p>最后把它们一个个放到它们应该去的地方就好了.</p>
+<p>要是会正则表达式还会点编程, 可以写个脚本做上面的事, 这个可能得自学一阵子才能正常的用, 就不讲了.</p>
+<p><img src="https://forum.javcdn.pw/i.imgur.com/QiDRWON.gif" alt=""></p>
+<h2 id="使用命令行工具偷懒"><a href="#使用命令行工具偷懒" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:使用命令行工具偷懒" class="headings">使用命令行工具偷懒</a></h2>
+<p>裁剪完的视频, 如果一个视频被裁出好几段, TunesKit Video Cutter 不会自动合并它们, 只能自己手动合并, 可以用ffmpeg, 偶尔用用就不用再下载个什么软件了.</p>
+<p>先看一眼目录里的样子</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0920.48.04.jpg" alt="iShot2020-06-0920.48.04"></p>
+<p>然后打开一个文本编辑器把这些文件名复制进去, 用英文的引号包起来, 每行开头加个&quot;file &quot;, 最后把这个文件保存在这个目录里.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0920.50.56.jpg" alt="iShot2020-06-0920.50.56"></p>
+<p>打开系统自带的&quot;终端.app&quot;</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-0920.57.15.jpg" alt="iShot2020-06-0920.57.15"></p>
+<p>输入&quot;cd &quot;, 然后把视频所在的文件夹直接拖进去, 回车. 然后输入</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">ffmpeg -f concat -safe <span class="m">0</span> -i filelist.txt -c copy output.mp4
+</code></pre></td></tr></table></div>
+</div>
+</div><p>这个&quot;-safe 0&quot;不能省, 你可以试试不加的话它报什么错.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/2020-06-09%2021-04-51.2020-06-09%2021_09_30.gif" alt="2020-06-0921-04-51.2020-06-0921_09_30"></p>
+<p>合成完毕以后, 得手动删除那几个分段的文件, 有点繁琐, 但合并视频不经常用, 所以其实还好.</p>
+<p>我比较懒, 上面这样弄有点累, 写个脚本给自己省点事. 红框里相当于上面手敲的那段ffmpeg命令.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/QPbYST.png" alt="QPbYST"></p>
+<p>效果是这样的.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/2020-06-09%2023-46-09.2020-06-09%2023_49_43.gif" alt="2020-06-0923-46-09.2020-06-0923_49_43"></p>
+<p>那几段视频没直接删, 送废纸篓了.</p>
+<p>代码挺简单的, 就不讲了. 看不明白的直接复制粘贴到一个文本文件里, 保存到本地随便哪里, 文件名随意, 但txt文件要照着上面的动图给txt起名字.</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">fileListTextFileName</span> <span class="o">=</span> <span class="s1">&#39;filelist.txt&#39;</span>
+
+<span class="k">def</span> <span class="nf">ffmpegTask</span><span class="p">(</span><span class="n">videoNames</span><span class="p">,</span> <span class="n">folderPath</span><span class="p">):</span>
+    <span class="n">firstVideoName</span> <span class="o">=</span> <span class="n">videoNames</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;(_\d+)&#39;</span>
+    <span class="n">finalVideoName</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="n">firstVideoName</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">finalVideoPath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folderPath</span><span class="p">,</span> <span class="n">finalVideoName</span><span class="p">)</span>
+    <span class="n">fileListTextFilePath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folderPath</span><span class="p">,</span> <span class="n">fileListTextFileName</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fileListTextFilePath</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">videoName</span> <span class="ow">in</span> <span class="n">videoNames</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">f</span><span class="s2">&#34;file &#39;{videoName}&#39;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+
+    <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">folderPath</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;ffmpeg&#39;</span><span class="p">,</span> <span class="s1">&#39;-f&#39;</span><span class="p">,</span> <span class="s1">&#39;concat&#39;</span><span class="p">,</span> <span class="s1">&#39;-safe&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;-i&#39;</span><span class="p">,</span> <span class="n">fileListTextFilePath</span><span class="p">,</span> <span class="s1">&#39;-c&#39;</span><span class="p">,</span> <span class="s1">&#39;copy&#39;</span><span class="p">,</span> <span class="n">finalVideoPath</span><span class="p">])</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&#34;ERROR: ffmpeg合并视频时发生错误:</span><span class="se">\n</span><span class="s2">{e}&#34;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">False</span>
+
+
+<span class="k">def</span> <span class="nf">getVideoNames</span><span class="p">(</span><span class="n">folderPath</span><span class="p">):</span>
+    <span class="n">videoExtensionList</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;.mp4&#39;</span><span class="p">,</span> <span class="s1">&#39;.avi&#39;</span><span class="p">,</span> <span class="s1">&#39;.mov&#39;</span><span class="p">,</span> <span class="s1">&#39;.mkv&#39;</span><span class="p">,</span> <span class="s1">&#39;.wmv&#39;</span><span class="p">,</span> <span class="s1">&#39;.flv&#39;</span><span class="p">]</span>
+    <span class="n">fileList</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">folderPath</span><span class="p">)</span>
+    <span class="n">videoNames</span> <span class="o">=</span> <span class="p">[</span><span class="n">fileName</span> <span class="k">for</span> <span class="n">fileName</span> <span class="ow">in</span> <span class="n">fileList</span> <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">fileName</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">videoExtensionList</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">videoNames</span>
+
+
+<span class="k">def</span> <span class="nf">sendToTrash</span><span class="p">(</span><span class="n">filePaths</span><span class="p">):</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">filePaths</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="nb">file</span><span class="p">):</span>
+            <span class="c1"># 不用abspath也可以, 本来就是绝对路径</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\\\</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&#34;&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#34;&#39;</span><span class="p">)</span>
+            <span class="n">files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;the POSIX file &#34;&#39;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s1">&#39;&#34;&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;WARNING: {file} 不存在.&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c1"># 模拟Finder的操作, 把文件扔到垃圾篓</span>
+        <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;osascript&#39;</span><span class="p">,</span> <span class="s1">&#39;-e&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;tell app &#34;Finder&#34; to move {&#39;</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">files</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;} to trash&#39;</span><span class="p">]</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">devnull</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;SUCCESS: All done.&#39;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">r</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="k">else</span> <span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">folderPath</span><span class="p">):</span>
+    <span class="n">videoNames</span> <span class="o">=</span> <span class="n">getVideoNames</span><span class="p">(</span><span class="n">folderPath</span><span class="p">)</span>
+    <span class="n">videoPaths</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folderPath</span><span class="p">,</span> <span class="n">videoName</span><span class="p">)</span> <span class="k">for</span> <span class="n">videoName</span> <span class="ow">in</span> <span class="n">videoNames</span><span class="p">]</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">ffmpegTask</span><span class="p">(</span><span class="n">videoNames</span><span class="p">,</span> <span class="n">folderPath</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="c1"># 把生成的文本文件加进去一起删掉</span>
+        <span class="n">videoPaths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folderPath</span><span class="p">,</span> <span class="n">fileListTextFileName</span><span class="p">))</span>
+        <span class="n">sendToTrash</span><span class="p">(</span><span class="n">videoPaths</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;请根据错误信息调整代码.&#34;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+    <span class="n">selectedPath</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;请粘贴视频所在的文件夹路径: &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">selectedPath</span><span class="p">):</span>
+        <span class="n">main</span><span class="p">(</span><span class="n">selectedPath</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;目录不存在!&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>视频也改完名了, 该合并的也合并了, 可能有人喜欢再弄个预览图, 之前发现一个叫&quot;mtn&quot;的工具用起来比较简单, 它依赖于ffmpeg. 文档页面是 <a href="https://gitlab.com/movie_thumbnailer/mtn/-/wikis/home" target="_blank" rel="noopener">https://gitlab.com/movie_thumbnailer/mtn/-/wikis/home</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/wd3LxE.png" alt="wd3LxE"></p>
+<p>用mac的应该都会用brew吧, 上面的ffmpeg也假设你会装, 就不说了, 不会的谷歌/百度一下.</p>
+<p>安装copy下面这句, 粘贴完回车等它装完.</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">brew install vitkabele/tap/mtn
+</code></pre></td></tr></table></div>
+</div>
+</div><p>因为墙的存在, 没梯子用brew装东西会很慢, 有梯子的话, 如果平时使用PAC模式, 终端并不能自动走PAC规则, 可以在当前终端临时使用socks连接(关闭终端就失效了, 想用梯子再输入一次), 比不用梯子能快太多了.</p>
+<pre><code># 用你的端口去替换1096
+export ALL_PROXY=socks5://127.0.0.1:1096
+# 然后再brew install
+</code></pre><p>这个mtn我刚装完跟着文档走了一遍, 结果有坑, 在字体那块, macOS和linux不太一样, 直接看我写的就行了.</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">mtn -c <span class="m">3</span> -r <span class="m">3</span> -B <span class="m">120</span> -E <span class="m">60</span> -D <span class="m">12</span> -w <span class="m">1920</span> -f /System/Library/Fonts/PingFang.ttc -i -q 视频文件名.mp4
+</code></pre></td></tr></table></div>
+</div>
+</div><p>-c: column, 喜欢几列就填几</p>
+<p>-r: row, 喜欢几行就填几</p>
+<p>-B: 忽略视频开头的秒数, 有时视频没裁剪过的话, 前面有大概90多秒的广告, 跳过这块</p>
+<p>-E: 忽略视频结尾的秒数, 经常尾部也有个短一点的广告, 跳过这块</p>
+<p>-D: 边缘检测</p>
+<p>-w: 图片的width宽度, 高度就不用设了, 每张小图都是等比例缩放的, 高度自适应, 也可以自定义每张小图的高度, 但没必要.</p>
+<p>-f: 图片中文本的字体(很讨厌, 不写不行, 会报错), 我用的苹果的&quot;苹方&quot;体.</p>
+<p>-i: 不把元数据写到图片上, 喜欢顶部有块信息的可以不加&quot;-i&quot;</p>
+<p>-q: quiet mode, 安静模式, 只要不出错就没提示, 不加的话命令行会输出一些无用信息.
+最后放视频全名.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/2020-06-10%2000-38-14.2020-06-10%2000_39_24.gif" alt="2020-06-1000-38-14.2020-06-1000_39_24"></p>
+<p>图片效果是这样的, 每张小图左下角有个特别小的时间文本.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/VThckN.png" alt="VThckN"></p>
+<p>它会默认的给文件加个&quot;_s&quot;, 要是不喜欢可以自己换, &quot;mtn -h&quot;看看&quot;-o&quot;那里的说明.</p>
+<p>还有一种带视频元数据的, 看着别扭, 去掉上面的&quot;-i&quot;参数, 就是下面这样的:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-1000.45.43.jpg" alt="iShot2020-06-1000.45.43"></p>
+<p>如果有一堆视频等着生成预览, 自己写个脚本去遍历文件吧, 就不说了.</p>
+<p>有时会和同学朋友同事&quot;交流一下&quot;, 有的视频可能需要旋转一下去适应手机屏幕, 用ffmpeg就行, 只修改元数据不用转码, 角度随意.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/2020-06-10%2001-33-12.2020-06-10%2001_37_12.gif" alt="2020-06-1001-33-12.2020-06-1001_37_12"></p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">ffmpeg -i input.mp4 -metadata:s:v <span class="nv">rotate</span><span class="o">=</span><span class="s2">&#34;90&#34;</span> -c:v copy -c:a copy output.mp4
+<span class="c1"># 或</span>
+ffmpeg -i input.mp4 -metadata:s:v <span class="nv">rotate</span><span class="o">=</span><span class="s2">&#34;90&#34;</span> -c copy output.mp4
+</code></pre></td></tr></table></div>
+</div>
+</div><p>有个下Anime图片的网站, 图片来源是Konachan, 用着比Konachan方便.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/isOK3C.png" alt="isOK3C"></p>
+<p>它有一些分类</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/cxRWmE.png" alt="cxRWmE"></p>
+<p>看到喜欢的图片, 点一下图片右下角的&quot;+&quot;, 就添加到地址列表里了, 想导出这些图片的url时, 点一下地址列表, 然后复制它们就行了.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/AIG2Lz.png" alt="AIG2Lz"></p>
+<p>最后用你喜欢的下载工具去批量下载它们即可, 我习惯用aria2</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/2020-06-11%2001-50-39.2020-06-11%2001_53_53.gif" alt="2020-06-1101-50-39.2020-06-1101_53_53"></p>
+            </div>
+
+        </article>
+
+        
+
+        
+    
+    
+        <ul class="post-copyright">
+            <li class="copyright-item author"><span class="copyright-item-text">作者</span>：<a href="https://example.com/" target="_blank" rel="noopener">Sugimoto</a></li>
+            
+                
+                
+                
+                
+                <li class="copyright-item link"><span class="copyright-item-text">链接</span>：<a href="/posts/%E7%9C%8B%E7%89%87%E5%84%BF%E7%9A%84%E4%B8%80%E7%82%B9%E8%BE%B9%E7%BC%98%E6%8A%80%E6%9C%AF/" target="_blank" rel="noopener">https://example.com/posts/看片儿的一点边缘技术/</a></li>
+            
+            <li class="copyright-item license"><span class="copyright-item-text">许可</span>：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></li>
+            
+        </ul>
+    
+
+
+
+        
+    <div class="updated-badge-container">
+        <span title="Updated @ 2020-06-16 12:56:01 CST" style="cursor:help">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-06-16</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-06-16</text></g></svg>
+        </span></div>
+
+
+
+        
+
+
+        <div class="post-share">
+
+        
+
+        <div class="share-items">
+
+            
+                <div class="share-item twitter">
+                    
+                    <a href="https://twitter.com/share?url=https://example.com/posts/%E7%9C%8B%E7%89%87%E5%84%BF%E7%9A%84%E4%B8%80%E7%82%B9%E8%BE%B9%E7%BC%98%E6%8A%80%E6%9C%AF/&amp;text=%e7%9c%8b%e7%89%87%e5%84%bf%e7%9a%84%e4%b8%80%e7%82%b9%e8%be%b9%e7%bc%98%e6%8a%80%e6%9c%af&amp;hashtags=&amp;via=%25!s%28%3cnil%3e%29" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item facebook">
+                    
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://example.com/posts/%E7%9C%8B%E7%89%87%E5%84%BF%E7%9A%84%E4%B8%80%E7%82%B9%E8%BE%B9%E7%BC%98%E6%8A%80%E6%9C%AF/&amp;hashtag=%23" title="分享到「Facebook」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                </div>
+            
+
+            
+
+            
+                <div class="share-item telegram">
+                    
+                    <a href="https://t.me/share/url?url=https://example.com/posts/%E7%9C%8B%E7%89%87%E5%84%BF%E7%9A%84%E4%B8%80%E7%82%B9%E8%BE%B9%E7%BC%98%E6%8A%80%E6%9C%AF/&amp;text=%e7%9c%8b%e7%89%87%e5%84%bf%e7%9a%84%e4%b8%80%e7%82%b9%e8%be%b9%e7%bc%98%e6%8a%80%e6%9c%af" title="分享到「Telegram」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon telegram-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                </div>
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+        </div>
+
+    </div>
+
+
+
+
+        
+    
+    
+
+
+
+        
+    
+
+
+
+        
+
+
+        
+
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+                <li class="post-nav-prev">
+                    <a href="/posts/%E6%9C%AC%E5%9C%B0av%E7%9A%84%E7%BB%88%E6%9E%81%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F/" rel="prev">&lt; 本地AV的终极管理方式</a>
+                </li>
+            
+            
+                <li class="post-nav-next">
+                    <a href="/posts/hello-world/" rel="next">Hello World &gt;</a>
+                </li>
+            
+        </ul>
+    
+
+
+
+        
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;1969–2020&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;Sugimoto</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+
+            
+    
+        <ul class="socials"><li class="socials-item">
+                    <a href="https://t.me/sugimoto_yumi" target="_blank" rel="external noopener" title="Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon social-icon"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="sugimoto.av@gmail.com" target="_blank" rel="external noopener" title="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon social-icon"><path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="/rss.xml" target="_blank" rel="external noopener" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
+                </li></ul>
+    
+
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speedAsDuration: true,
+        header: '[data-scroll-header]'
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
