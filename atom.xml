@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">sugimoto</title>
     <subtitle type="html">时不时发一些看片的边缘技术(特别水)。</subtitle>
-    <updated>2020-06-16T12:00:29&#43;08:00</updated>
+    <updated>2020-06-16T12:49:29&#43;08:00</updated>
     <id>https://example.com/</id>
     <link rel="alternate" type="text/html" href="https://example.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://example.com/atom.xml" />
@@ -20,16 +20,14 @@
             <title type="text">本地AV的终极管理方式</title>
             <link rel="alternate" type="text/html" href="https://example.com/posts/%E6%9C%AC%E5%9C%B0av%E7%9A%84%E7%BB%88%E6%9E%81%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F/" />
             <id>https://example.com/posts/%E6%9C%AC%E5%9C%B0av%E7%9A%84%E7%BB%88%E6%9E%81%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F/</id>
-            <updated>2020-06-16T12:00:24&#43;08:00</updated>
+            <updated>2020-06-16T12:49:15&#43;08:00</updated>
             <published>2020-06-16T01:05:43&#43;08:00</published>
             <author>
                     <name>Sugimoto</name>
                     <uri>https://example.com/</uri>
                     <email>sugimoto.av@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;img src=&#34;https://cdn.jsdelivr.net/gh/zhaoleihello/ImageStore@master/Images/iShot2020-06-1602.14.03.jpg&#34; width=600px title=&#34;更新中&#34;&gt;……
-    
-    </summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">(我瞎说的...)</summary>
             
             
             
