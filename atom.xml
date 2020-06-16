@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">sugimoto</title>
     <subtitle type="html">时不时发一些看片的边缘技术(特别水)。</subtitle>
-    <updated>2020-06-16T12:49:29&#43;08:00</updated>
+    <updated>2020-06-16T12:56:08&#43;08:00</updated>
     <id>https://example.com/</id>
     <link rel="alternate" type="text/html" href="https://example.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://example.com/atom.xml" />
@@ -28,6 +28,33 @@
                     <email>sugimoto.av@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">(我瞎说的...)</summary>
+            
+            
+            
+            
+            
+                
+                    
+                
+                    
+                
+            
+        </entry>
+    
+        <entry>
+            <title type="text">看片儿的一点边缘技术</title>
+            <link rel="alternate" type="text/html" href="https://example.com/posts/%E7%9C%8B%E7%89%87%E5%84%BF%E7%9A%84%E4%B8%80%E7%82%B9%E8%BE%B9%E7%BC%98%E6%8A%80%E6%9C%AF/" />
+            <id>https://example.com/posts/%E7%9C%8B%E7%89%87%E5%84%BF%E7%9A%84%E4%B8%80%E7%82%B9%E8%BE%B9%E7%BC%98%E6%8A%80%E6%9C%AF/</id>
+            <updated>2020-06-16T12:56:01&#43;08:00</updated>
+            <published>2020-06-15T20:04:30&#43;08:00</published>
+            <author>
+                    <name>Sugimoto</name>
+                    <uri>https://example.com/</uri>
+                    <email>sugimoto.av@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;p&gt;请注意, 这是一篇特别水的文章.&lt;/p&gt;……
+    
+    </summary>
             
             
             

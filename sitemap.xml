@@ -4,17 +4,22 @@
   
   <url>
     <loc>https://example.com/posts/</loc>
-    <lastmod>2020-06-16T12:49:15+08:00</lastmod>
+    <lastmod>2020-06-16T12:56:01+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://example.com/</loc>
-    <lastmod>2020-06-16T12:49:15+08:00</lastmod>
+    <lastmod>2020-06-16T12:56:01+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://example.com/posts/%E6%9C%AC%E5%9C%B0av%E7%9A%84%E7%BB%88%E6%9E%81%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F/</loc>
     <lastmod>2020-06-16T12:49:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/%E7%9C%8B%E7%89%87%E5%84%BF%E7%9A%84%E4%B8%80%E7%82%B9%E8%BE%B9%E7%BC%98%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2020-06-16T12:56:01+08:00</lastmod>
   </url>
   
   <url>
