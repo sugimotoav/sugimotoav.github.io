@@ -9,7 +9,7 @@
   
   <url>
     <loc>https://example.com/</loc>
-    <lastmod>2020-06-17T22:29:28+08:00</lastmod>
+    <lastmod>2020-07-06T21:05:50+08:00</lastmod>
   </url>
   
   <url>
@@ -20,6 +20,11 @@
   <url>
     <loc>https://example.com/posts/%E7%9C%8B%E7%89%87%E5%84%BF%E7%9A%84%E4%B8%80%E7%82%B9%E8%BE%B9%E7%BC%98%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2020-06-16T12:56:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/about/</loc>
+    <lastmod>2020-07-06T21:05:50+08:00</lastmod>
   </url>
   
   <url>
